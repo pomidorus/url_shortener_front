@@ -7,3 +7,17 @@ body {
 .url-bar {
   margin-top: 16px;
 }
+
+.url-bar input {
+  font-size: 20px;
+  padding: 6px 6px 6px 6px;
+  width: 50%;
+}
+
+.url-bar button {
+  position: relative;
+  top: -1px;
+  height: 40px;
+  width: 130px;
+  font-size: 20px;
+}
