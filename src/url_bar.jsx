@@ -30,10 +30,23 @@ class UrlBar extends Component {
   };
 
   render() {
+    var links = this.state.links.map(function(link) {
+      return (
+        <div>
+          <a href={"https://nameless-harbor-10282.herokuapp.com/"+ link}>
+            {link}
+          </a>
+        </div>
+      )});
     return (
-      <div className="url-bar">
-        <input defaultValue={'http://www.facebook.com'} onChange={this.change_input} />
-        <button onClick={this.request_data}>Short it!</button>
+      <div>
+        <div className="url-bar">
+          <input defaultValue={'http://www.facebook.com'} onChange={this.change_input} />
+          <button onClick={this.request_data}>Short it!</button>
+        </div>
+        <div className="links">
+          {links}
+        </div>
       </div>
     );
   }
